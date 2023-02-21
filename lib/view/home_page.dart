@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(
                     color: Color(0xffD1EFFA),
                     fontWeight: FontWeight.w500,
-                    fontSize: 20.sp,
+                    fontSize: 25.sp,
                   ),
                 ),
                 SizedBox(
@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                           color: Color(0xffD1EFFA),
                           fontWeight: FontWeight.w500,
-                          fontSize: 12.sp,
+                          fontSize: 15.sp,
                         ),
                       ),
                     ],
@@ -209,7 +209,7 @@ class _HomePageState extends State<HomePage> {
           ),
           child: CarouselSlider.builder(
             options: CarouselOptions(
-              // autoPlay: true,
+              autoPlay: true,
               viewportFraction: 1,
               pageSnapping: true,
               onPageChanged: (index, reason) {

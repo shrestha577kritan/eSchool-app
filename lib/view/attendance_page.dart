@@ -88,46 +88,48 @@ class _AttendancePageState extends State<AttendancePage> {
             top: 120.h,
             left: 20.w,
             right: 20.w,
-            child: Container(
-              height: 60.h,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10.r)),
-              ),
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff00577C),
-                          borderRadius: BorderRadius.all(Radius.circular(5.r)),
+            child: Card(
+              child: Container(
+                height: 60.h,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xff00577C),
+                            borderRadius: BorderRadius.all(Radius.circular(5.r)),
+                          ),
+                          child: Icon(
+                            CupertinoIcons.back,
+                            color: Colors.white,
+                          ),
                         ),
-                        child: Icon(
-                          CupertinoIcons.back,
-                          color: Colors.white,
+                        Text(
+                          'June 2023',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20.sp),
                         ),
-                      ),
-                      Text(
-                        'June 2023',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 15.sp),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff00577C),
-                          borderRadius: BorderRadius.all(Radius.circular(5.r)),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xff00577C),
+                            borderRadius: BorderRadius.all(Radius.circular(5.r)),
+                          ),
+                          child: Icon(
+                            CupertinoIcons.forward,
+                            color: Colors.white,
+                          ),
                         ),
-                        child: Icon(
-                          CupertinoIcons.forward,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

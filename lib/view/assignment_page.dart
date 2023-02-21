@@ -85,7 +85,7 @@ class _AssignmentPageState extends State<AssignmentPage>
                     indicatorColor: Colors.black,
                     indicator: BoxDecoration(
                       borderRadius: BorderRadius.all(
-                        Radius.circular(10.r),
+                        Radius.circular(15.r),
                       ), // Creates border
                       color: Colors.white,
                     ),

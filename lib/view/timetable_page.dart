@@ -25,14 +25,18 @@ class _TimeTablePageState extends State<TimeTablePage> {
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 200.h),
+                    padding: EdgeInsets.only(top: 250.h),
                     child: TabBar(
+                      physics: BouncingScrollPhysics(),
                       unselectedLabelColor: Color(0xff00577C),
+                      labelColor: Colors.white,
+                      unselectedLabelStyle: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 23.sp),
                       isScrollable: true,
                       indicatorColor: Colors.transparent,
                       indicator: BoxDecoration(
                         borderRadius: BorderRadius.all(
-                          Radius.circular(8.r),
+                          Radius.circular(5.r),
                         ), // Creates border
                         color: Color(0xff00577C),
                       ),
@@ -40,7 +44,9 @@ class _TimeTablePageState extends State<TimeTablePage> {
                         Tab(
                           child: Text(
                             'Mon',
-                            style: TextStyle(fontWeight: FontWeight.w500),
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                         Tab(
@@ -104,7 +110,7 @@ class _TimeTablePageState extends State<TimeTablePage> {
             ),
           ),
           Container(
-            height: 160.h,
+            height: 200.h,
             width: double.infinity,
             decoration: BoxDecoration(
               color: Color(0xff00577C),
@@ -133,7 +139,7 @@ class _TimeTablePageState extends State<TimeTablePage> {
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w400,
-                          fontSize: 25.sp),
+                          fontSize: 30.sp),
                     ),
                   ),
                 ],
@@ -141,23 +147,26 @@ class _TimeTablePageState extends State<TimeTablePage> {
             ),
           ),
           Positioned(
-            top: 132.h,
+            top: 155.h,
             left: 25.w,
             right: 25.w,
-            child: Container(
-              height: 40.h,
-              width: 50.w,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10.r)),
-              ),
-              child: Center(
-                child: Text(
-                  'Class - 9 A',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15.sp),
+            child: Card(
+              elevation: 4,
+              child: Container(
+                height: 60.h,
+                width: 50.w,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                ),
+                child: Center(
+                  child: Text(
+                    'Class - 9 A',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20.sp),
+                  ),
                 ),
               ),
             ),
@@ -238,6 +247,7 @@ class TabBarViewItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: BouncingScrollPhysics(),
       itemCount: subject.length,
       itemBuilder: (context, index) {
         return Row(
@@ -245,7 +255,7 @@ class TabBarViewItems extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(15),
               child: Container(
-                height: 55.h,
+                height: 90.h,
                 width: 60.w,
                 decoration: BoxDecoration(
                   color: subject[index][2],
@@ -264,15 +274,15 @@ class TabBarViewItems extends StatelessWidget {
                   subject[index][3].toString(),
                   style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 15.sp),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20.sp),
                 ),
                 SizedBox(height: 5.h),
                 Text(
                   subject[index][0].toString(),
                   style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 15.sp,
                     color: Colors.grey[700],
                   ),
                 ),
@@ -280,8 +290,8 @@ class TabBarViewItems extends StatelessWidget {
                 Text(
                   subject[index][4].toString(),
                   style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 15.sp,
                     color: Colors.grey[700],
                   ),
                 ),
